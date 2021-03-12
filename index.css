@@ -16,6 +16,7 @@ header .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 
 h1{
@@ -32,7 +33,7 @@ h1{
 .account {
 display: flex;
 flex-direction: column;
-margin: 0 15px 0 2px;
+margin: 0 15px 0 5px;
 font-size: 0.75em;
 }
 
@@ -86,4 +87,49 @@ font-size: 0.75em;
 .result{
     font-size: 2em;
     margin: 3px 0 5px -2px;
+}
+
+/* Icon 3 */
+
+#nav-icon3 {
+    padding: 10px;
+    width: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-icon3:hover {
+    background-color: #3ab256!important;
+  }
+  
+  #nav-icon3 span {
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    margin: 1.5px 0;
+  }
+
+#myDIV{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 65px;
+    right: -10px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgb(66 66 66 / 16%), 0 1px 6px 2px rgb(66 66 66 / 32%);
+    padding: 10px;
+}
+
+#myDIV a{
+    color: #222;
+    padding: 5px 10px;
+}
+
+#myDIV a:hover{
+    background-color: #eee;
+    cursor: pointer;
 }

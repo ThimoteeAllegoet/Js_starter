@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header{
+    background-color: #c13f71;
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    margin-bottom: 50px;
+}
+
+header .content {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+h1{
+    color: #fff;
+    padding: 10px 0;
+}
+
+.right-content{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.account {
+display: flex;
+flex-direction: column;
+margin: 0 15px 0 5px;
+font-size: 0.75em;
+}
+
+.account > *{
+    margin: 2px 0;
+}
+
+.game-content{
+    margin: auto;
+    max-width: 800px;
+}
+
+.grid-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-bottom: 20px;
+}
+
+.item{
+    box-shadow: 0 1px 1px 0 rgb(66 66 66 / 8%), 0 1px 3px 1px rgb(66 66 66 / 16%);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: flex;
+    justify-content: center;
+    padding: 75px 20px;
+    cursor: pointer;
+}
+
+.item:hover {
+    box-shadow: 0 1px 1px 0 rgb(66 66 66 / 16%), 0 1px 6px 2px rgb(66 66 66 / 32%);
+}
+
+.item > img{
+    width: 100px;
+}
+
+.result-content{
+    color: #616161;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    width: 30%;
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    border-top: solid 10px #a0a0a0;
+    padding-top: 5px;
+}
+
+
+.result{
+    font-size: 2em;
+    margin: 3px 0 5px -2px;
+}
+
+/* Icon 3 */
+
+#nav-icon3 {
+    padding: 10px;
+    width: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav-icon3:hover {
+    background-color: #ac3361!important;
+  }
+  
+  #nav-icon3 span {
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    margin: 1.5px 0;
+  }
+
+#myDIV{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 65px;
+    right: -10px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgb(66 66 66 / 16%), 0 1px 6px 2px rgb(66 66 66 / 32%);
+    padding: 10px;
+}
+
+#myDIV a{
+    color: #222;
+    padding: 5px 10px;
+}
+
+#myDIV a:hover{
+    background-color: #eee;
+    cursor: pointer;
+}

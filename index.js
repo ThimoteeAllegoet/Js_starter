@@ -37,8 +37,10 @@ const feuille = document.getElementById('feuille');
 const pierre = document.getElementById('pierre');
 const ciseaux = document.getElementById('ciseaux');
 const items = document.getElementsByClassName('item');
+const menu = document.getElementById('nav-icon3');
 const result_color = document.getElementById("result");
 const result_color_border = document.getElementById("result-content");
+const menu_toggle = document.getElementById('myDIV');
 let choix_user = null;
 let choix_bot = null;
 let result = null;
@@ -48,7 +50,7 @@ feuille.addEventListener('click', () => {
     choix_user = 0;
     play(choix_user);
     document.getElementById("result").innerHTML = result;
-    document.getElementById("adversaire").innerHTML = "L'adversaire à choisit : " + monTableau[choix_bot][1];
+    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
     result_style(result);
 })
 
@@ -56,7 +58,7 @@ pierre.addEventListener('click', () => {
     choix_user = 1;
     play(choix_user);
     document.getElementById("result").innerHTML = result;
-    document.getElementById("adversaire").innerHTML = "L'adversaire à choisit : " + monTableau[choix_bot][1];
+    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
     result_style(result);
 })
 
@@ -64,6 +66,28 @@ ciseaux.addEventListener('click', () => {
     choix_user = 2;
     play(choix_user);
     document.getElementById("result").innerHTML = result;
-    document.getElementById("adversaire").innerHTML = "L'adversaire à choisit : " + monTableau[choix_bot][1];
+    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
     result_style(result);
+})
+
+menu.addEventListener('click', (event) => {
+    let x = document.getElementById("myDIV");
+    if (x.style.display == "none") {
+      x.style.display = "flex";
+      menu.style.backgroundColor = "#3ab256";
+    } else {
+        x.style.display = "none";
+        menu.style.backgroundColor = "#40C25F";
+    }
+    event.stopPropagation();
+})
+
+document.addEventListener('click', () => {
+    let x = document.getElementById("myDIV");
+    x.style.display = "none";
+    menu.style.backgroundColor = "#40C25F";
+})
+
+menu_toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
 })

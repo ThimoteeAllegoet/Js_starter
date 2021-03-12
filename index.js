@@ -13,7 +13,7 @@ const play = (choix_user) => {
         if (choix_bot == 2 && choix_user == 0) {
             return 'Perdu'
         }
-        return result = ('Gagné')
+        return 'Gagné'
     } else if (choix_user == 2 && choix_bot == 0) {
         return 'Gagné'
     } else {

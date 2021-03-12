@@ -6,21 +6,25 @@ const play = (choix_user) => {
     choix_bot = getRandomInt(3);
     console.log('Moi : ' + choix_user);
     console.log('Bot : ' + choix_bot);
+    
     if (choix_user == choix_bot) {
-        return result = ('Egalité')
+        return 'Egalité'
     } else if (choix_user < choix_bot){
         if (choix_bot == 2 && choix_user == 0) {
-            return result = ('Perdu')
+            return 'Perdu'
         }
         return result = ('Gagné')
     } else if (choix_user == 2 && choix_bot == 0) {
-        return result = ('Gagné')
+        return 'Gagné'
     } else {
-        return result = ('Perdu')
+        return 'Perdu'
     }
 }
 
 const result_style = (result) => {
+    document.getElementById("result").innerHTML = result;
+    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
+    
     if (result == 'Gagné') {
         result_color.style.color = '#40C25F';
         result_color_border.style.borderTopColor = '#40C25F';
@@ -43,30 +47,23 @@ const result_color_border = document.getElementById("result-content");
 const menu_toggle = document.getElementById('myDIV');
 let choix_user = null;
 let choix_bot = null;
-let result = null;
 const monTableau = [[0, 'Feuille'],[1, 'Pierre'],[2, 'Ciseaux'],];
 
 feuille.addEventListener('click', () => {
     choix_user = 0;
-    play(choix_user);
-    document.getElementById("result").innerHTML = result;
-    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
+    const result = play(choix_user);
     result_style(result);
 })
 
 pierre.addEventListener('click', () => {
     choix_user = 1;
-    play(choix_user);
-    document.getElementById("result").innerHTML = result;
-    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
+    const result = play(choix_user);
     result_style(result);
 })
 
 ciseaux.addEventListener('click', () => {
     choix_user = 2;
-    play(choix_user);
-    document.getElementById("result").innerHTML = result;
-    document.getElementById("adversaire").innerHTML = "L'adversaire a choisit : " + monTableau[choix_bot][1];
+    const result = play(choix_user);
     result_style(result);
 })
 
